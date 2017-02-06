@@ -1,0 +1,23 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  port: 5432
+  database: the_naked_album_development
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  port: 5432
+  database: the_naked_album_test
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  port: 5432
+  host: localhost
+  database: the_naked_album_production
+  username: the_naked_album
+  password: the_naked_album
