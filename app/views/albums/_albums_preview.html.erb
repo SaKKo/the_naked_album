@@ -1,0 +1,7 @@
+<% raise "no album" if albums.nil? %>
+
+<ul>
+<% albums.each do |album| %>
+  <li><%= link_to album.name, album_path(id: album.id) %></li>
+<% end %>
+</ul>

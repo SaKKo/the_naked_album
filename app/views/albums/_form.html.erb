@@ -16,10 +16,12 @@
     <%= f.text_area :name %>
   </div>
 
-  <div class="field">
-    <%= f.label :user_id %>
-    <%= f.text_field :user_id %>
-  </div>
+  <%= f.select(:user_id) do %>
+    <% @users.each do |user| %>
+      <%= content_tag(:option, user.full_name, value: user.id) %>
+    <% end %>
+  <% end %>
+
 
   <div class="actions">
     <%= f.submit %>
