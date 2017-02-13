@@ -11,9 +11,14 @@
 #  image_file_content_type :string
 #  image_file_file_size    :integer
 #  image_file_updated_at   :datetime
+#  album_id                :integer
+#  uid                     :text
 #
 
 class Image < ApplicationRecord
+  
+  belongs_to :album
+
   has_attached_file :image_file, styles: {large: "1024x1024>", medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
   validates_attachment_content_type :image_file, content_type: /\Aimage\/.*\z/
 end

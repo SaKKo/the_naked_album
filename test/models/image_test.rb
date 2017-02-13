@@ -11,6 +11,8 @@
 #  image_file_content_type :string
 #  image_file_file_size    :integer
 #  image_file_updated_at   :datetime
+#  album_id                :integer
+#  uid                     :text
 #
 
 require 'test_helper'

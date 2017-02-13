@@ -11,5 +11,5 @@
   <%= @image.description %>
 </p>
 
-<%= link_to 'Edit', edit_image_path(@image) %> |
-<%= link_to 'Back', images_path %>
+<%= link_to 'Edit', edit_album_image_path(album_id: @image.album_id, id: @image.id) %> |
+<%= link_to 'Back', album_images_path(album_id: @image.album_id) %>
